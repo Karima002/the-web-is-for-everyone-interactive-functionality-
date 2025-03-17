@@ -51,7 +51,13 @@ app.get('/acquisition', async function (request, response) {
 });
 
 //POST routes
+let forms = [] //array voor het opslaan van formulieren
 
+app.post('/acquisition', async function (request, response) {
+  forms.push (request.body.texts)
+  response.redirect(303, '/acquisition')
+
+})
 
 
 /*
