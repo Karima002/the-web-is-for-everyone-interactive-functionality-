@@ -33,6 +33,8 @@ app.get('/', async function (request, response) {
   response.render("index.liquid", { api: apiResponseJSON.data });
 });
 
+
+
 app.get ('/object/:id', async function (request, response) {
   const artworkId = request.params.id; 
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image`
