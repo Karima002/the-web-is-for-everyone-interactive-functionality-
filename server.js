@@ -55,8 +55,30 @@ app.get('/acquisition', async function (request, response) {
 //POST routes
 let forms = [] //array voor het opslaan van formulieren
 
+// app.post('/acquisition', async function (request, response) {
+//   forms.push (request.body.texts)
+//   response.redirect(303, '/acquisition')
+
+// })
+
+
 app.post('/acquisition', async function (request, response) {
-  forms.push (request.body.texts)
+  // forms.push (request.body.texts)
+
+  console.log(request.body)
+  await fetch("https://fdnd-agency.directus.app/items/fabrique_messages", {
+    method: "POST",
+    body: JSON.stringify({
+      for: "Karima_" + request.body.name,
+      from: request.body.email,
+      text: request.body.description,
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }, //request met post, met headers geef je aan wat er is meegegeven, je geeft informatie over wat je in de request heb meegegeven. 
+  });
+  
+
   response.redirect(303, '/acquisition')
 
 })
