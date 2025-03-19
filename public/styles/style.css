@@ -121,7 +121,7 @@ hr {
     }
 }
 
-form {
+.form-search-collection {
     position: fixed;
     bottom: 1em;
     right: 50%;

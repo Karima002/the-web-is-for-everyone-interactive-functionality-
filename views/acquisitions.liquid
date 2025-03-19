@@ -1,10 +1,12 @@
-<form method="post" action="/acquisition">
+{% render 'partials/head.liquid', title: 'Qatar Museums' %}
 
-    <label>
-        <input type="text" name="texts" required> {% comment %} Alleen formuliervelden met een name attribuut worden in een POST request meegestuurd door de browser. {% endcomment %}
-    </label>
+{% render 'partials/header.liquid' %}
+
+<form method="post" action="/acquisition">
+    <input type="text" name="name" required />
+    <input type="text" name="email" required />
+    <input type="text" name="description" required />
 
     <button type="submit">Submit</button>
-
 </form>
 
