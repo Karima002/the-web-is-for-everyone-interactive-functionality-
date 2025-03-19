@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Din Next it pro";
+    src: url(./fonts/din-next-lt-pro-regular.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Din Next it bold";
+    src: url(./fonts/din-next-lt-pro-bold.woff2);
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: "Din Next it arabic";
+    src: url(./fonts/din-next-lt-arabic-regular.ttf);
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Din Next it bold arabic";
+    src: url(./fonts/din-next-lt-arabic-bold.woff2);
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+
+body {
+    /* font-sizes */
+    --font-size-xxl: 3rem; /* 48px ÷ 16 = 3rem */
+    --font-size-xl: 2.375rem; /* 38px ÷ 16 = 2.375rem */
+    --font-size-l: 2rem; /* 32px ÷ 16 = 2rem */
+    --font-size-xm: 1.5rem;
+    --font-size-m: 1rem; /*16px, voor de header*/
+    --font-size-s: .9rem;
+    --font-size-xxs: 0.875rem; /* 14px ÷ 16 = 0.875rem */
+
+    /* kleuren */
+    --color-default: black;
+    --color-accent: white;
+    --color-accent-yellow: #F9FF1E;
+    --color-detailpage: #464646;
+
+    /* fonts */
+    --font-default: "Din Next it pro", sans-serif;
+    --font-arabic: "Din Next it arabic", sans-serif;
+    --font-default-bold: "Din Next it bold", sans-serif;
+    --font-default-bold-arabic: "Din Next it bold arabic", sans-serif;
+
+    /* line height */
+    --line-height-text: 28px; /* line heigth voor de paragraaf op detailpagina*/
+
+    /* letter spacing */
+    --letter-spacing: -1.5%;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
