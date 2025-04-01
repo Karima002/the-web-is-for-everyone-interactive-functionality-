@@ -5,6 +5,12 @@
 }
 
 /* MARK: Header */
+header {
+    padding-bottom: .5em;
+    border-bottom: solid 1px var(--color-default);
+    padding-top: .5em;
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -85,11 +91,6 @@ span {
     font-size: var(--font-size-s);
     text-transform: uppercase;
     font-weight: 550;
-}
-
-hr {
-    color: var(--color-default);
-    margin-top: 1em;
 }
 
 /* MARK: main */
