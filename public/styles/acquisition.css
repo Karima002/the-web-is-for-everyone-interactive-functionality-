@@ -1,0 +1,56 @@
+.title {
+    border-bottom: solid 1px var(--color-default);
+    margin-bottom: 5em;
+    padding-bottom: 1em;
+}
+
+.title-acquisition {
+    
+    font-family: var(--font-default);
+    font-size: var(--font-size-xxxl);
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 1em 0 1em 0;
+    border-bottom: solid 1px var(--color-default);
+    @supports (display: flex) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.paragraph-acquisition {
+    font-family: var(--font-default);
+    font-weight: 100;
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-text);
+    letter-spacing: var(--letter-spacing);
+    padding: 2em;
+    @supports (display: flex) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.paragraph-mandatory {
+    color: var(--color-default);
+    font-family: var(--font-default);
+    font-size: var(--font-size-s);
+    
+}
+
+.form-section {
+    @supports (display: flex) {
+        display: flex;
+        justify-content: center;
+    }
+}
+h2 {
+    font-family: var(--font-default);
+    font-weight: 100 ;
+    font-size: var(--font-size-xm);
+    padding-bottom: 1em;
+    padding-top: 2em;
+    place-content: center;
+
+}
