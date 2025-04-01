@@ -49,7 +49,10 @@ app.get('/acquisition', async function (request, response) {
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
   
-  response.render("acquisitions.liquid", { api: apiResponseJSON.data });
+  const messageResponse = await fetch("https://fdnd-agency.directus.app/items/fabrique_messages/?filter={%22for%22:%20{%22_contains%22:%20%22Karima_%22}}")
+  const messageResponseJSON = await messageResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+
+  response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
 });
 
 //POST routes
