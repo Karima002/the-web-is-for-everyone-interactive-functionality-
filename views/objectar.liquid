@@ -1,0 +1,31 @@
+{% render 'partials/head.liquid', title: 'Qatar Museums' %}
+
+{% render 'partials/headerar.liquid' %}
+
+<main class="main-detail">
+
+
+<section class="artwork">
+    <article class="back-home">
+        <img src="/assets/backbutton.svg">
+        <a href="/">ارجـع</a>
+    </article>
+
+    {% if artwork.image %}
+        <img class="artwork-object" src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="images of artwork in qatar " width="300px">        
+
+    {% else %}
+        <p>لا تـوجـد صـورة </p>
+    {% endif %}
+
+    <article class="copyright">
+        <p>© مـتـحـف الـفـن الإسـلامـي، الـدوحـة</p>
+    </article>
+</section>
+
+<section class="info-artwork">
+    {% for %}
+    <h1>{{ artwork.titleAR }}</h1>
+    <p> {{ artwork.summaryAR }}</p>
+</section>
+

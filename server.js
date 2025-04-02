@@ -47,7 +47,6 @@ app.get ('/object/:id', async function (request, response) {
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image,summary`
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-  console.log(apiResponseJSON.data);
   response.render("objects.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
 });
 
@@ -62,13 +61,12 @@ app.get('/acquisition', async function (request, response) {
   response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
 });
 
-app.get('/ar/:id', async function (request, response) {
+app.get('/ar/object/:id', async function (request, response) {
   const artworkId = request.params.id; 
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,titleAR,image,slug,summary,summaryAR`
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-  console.log(apiResponseJSON.data);
-  response.render("ar.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
+  response.render("objectar.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
 });
 
 

@@ -1,4 +1,4 @@
-{% render 'partials/head.liquid', title: 'Qatar Museums' %}
+{% render 'partials/head.liquid', title: 'Proposal for Object Acquisition' %}
 
 {% render 'partials/header.liquid' %}
 
@@ -17,7 +17,10 @@
 
     <form method="post" action="/acquisition">
         <h2>Your information</h2>
+        <p class="paragraph-mandatory">Full name*</p>
         <input type="text" name="name" required/>
+
+        <p class="paragraph-mandatory">E-mail*</p>
         <input type="text" name="email" required/>
 
         <h2>Object details</h2>
@@ -30,7 +33,7 @@
 <section class="form-section history">
     <h2>History proposals</h2>
 
-    {% for message in messages reversed  %}
+    {% for message in messages reversed %}
         {% if forloop.index <= 3 %}
             <p class="text-history"> {{ "Successful sent proposal at " | append: message.created }} </p>
         {% else %}
