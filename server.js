@@ -45,7 +45,7 @@ app.get('/ar', async function (request, response) {
 // Route voor elk specifiek object
 app.get ('/object/:id', async function (request, response) {
   const artworkId = request.params.id; 
-  const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image,summary`
+  const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image,summary,artist,location,displayDate,materials,techniques,objectNumber,recordType`
   );
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
   response.render("objects.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
