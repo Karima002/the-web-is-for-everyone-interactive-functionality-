@@ -76,3 +76,6 @@ form input[type="text"] {
     font-size: var(--font-size-s);
 }
 
+.history {
+    padding-bottom: 6em;
+}
