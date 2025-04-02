@@ -4,7 +4,7 @@ Qatar Museums wil een online collectie-ervaring bieden aan bezoekers. De opdrach
 
 De website is gebouwd met Node.js, Express, Liquid als templating engine en Directus. De website toont een interactieve objectengalerij en bevat een formulier waarmee gebruikers nieuwe objecten kunnen voorstellen.
 
-[Live site] (https://the-web-is-for-everyone-interactive-z6p6.onrender.com/)
+[Live site](https://the-web-is-for-everyone-interactive-z6p6.onrender.com/)
 
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
@@ -32,9 +32,9 @@ User Stories
 ## Kenmerken
 ### Gebruikte technologieën
 
-- Node.js & Express → Server-side logica en API-verzoeken
+- Node.js & Express → Server-side en API-verzoeken
 - Liquid → Templating engine voor dynamische pagina's
-- Directus → CMS en API voor het ophalen en opslaan van objectgegevens
+- Directus → API voor het ophalen en opslaan van objectgegevens
 - Fetch API → Client-side data ophalen en verzenden
 - CSS & Column Count → Responsive layout zonder gaten tussen afbeeldingen
 
