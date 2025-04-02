@@ -37,36 +37,41 @@
         <table>
             <tr>
                 <td class="label-cell">Full title:</td>
-                <td> {{ artwork.title | default: "No full title available"}}</td>
+                <td class="value-cell"> {{ artwork.title | default: "No full title available"}}</td>
             </tr>
             <tr>
                 <td class="label-cell">Artist:</td>
-                <td> {{ artwork.artist | default: "No artist available"}}</td>
+                <td class="value-cell"> {{ artwork.artist | default: "No artist available"}}</td>
             </tr>
             <tr>
                 <td class="label-cell">Location created:</td>
-                <td> {{ artwork.location | default: "No location available"}}</td>
+                <td class="value-cell"> {{ artwork.location | default: "No location available"}}</td>
             </tr>
             <tr>
                 <td class="label-cell">Period:</td>
-                <td>{{ artwork.displayDate | default: "No period available"}}</td>
+                <td class="value-cell">{{ artwork.displayDate | default: "No period available"}}</td>
             </tr>
             <tr>
                 <td class="label-cell">Material:</td>
-                <td> {{ artwork.materials | default: "No materia available"}}</td>
+                <td class="value-cell"> {{ artwork.materials | default: "No materia available"}}</td>
             </tr>
             <tr>
                 <td class="label-cell">Techniques:</td>
-                <td> {{ artwork.techniques | default: "No techniques available" }}</td>
+                <td class="value-cell"> {{ artwork.techniques | default: "No techniques available" }}</td>
             </tr>
             <tr>
                 <td class="label-cell">Object number:</td>
-                <td>{{ artwork.objectNumber | default: "No object number available" }}</td>
+                <td class="value-cell">{{ artwork.objectNumber | default: "No object number available" }}</td>
             </tr>
             <tr>
                 <td class="label-cell">Record type:</td>
-                <td>{{ artwork.recordType | default: "No record type available" }}</td>
+                <td class="value-cell">{{ artwork.recordType | default: "No record type available" }}</td>
             </tr>
+            <tr>
+                <td class="label-cell">Proposal</td>
+                <td class="value-cell">Interested in donating or selling an artwork to Qatar Museums? Submit your information through <a href="/acquisition">this</a> acquisitions proposal form.</td>
+            </tr>
+
         </table>
         {% else %}
             <p>No information available for artwork</p> 

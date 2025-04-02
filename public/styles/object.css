@@ -91,13 +91,17 @@
     td {
         padding: 1em 6em 0 0;
     }
+    .label-cell {
+        font-family: var(--font-default-bold);
+        font-weight: 700;
+    }
+    
+    .value-cell {
+        font-family: var(--font-default);
+    
+    }
 }
 
-
-.label-cell {
-    font-family: var(--font-default-bold);
-    font-weight: 700;
-}
 
 .summary-ar {
     font-size: var(--font-size-xm);
