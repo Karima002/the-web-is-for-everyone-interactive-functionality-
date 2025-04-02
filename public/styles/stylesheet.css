@@ -27,7 +27,7 @@
 
 /* Arabic light */
 @font-face {
-    font-family: "Din Next it bold arabic";
+    font-family: "Din Next it light arabic";
     src: url(./fonts/din-next-lt-arabic-light.woff2);
     font-style: normal;
     font-weight: light;
@@ -70,7 +70,8 @@ body {
     --font-arabic: "Din Next it arabic", sans-serif;
     --font-default-bold: "Din Next it bold", sans-serif;
     --font-default-bold-arabic: "Din Next it bold arabic", sans-serif;
-    --font-regulae-arabic: "", "sans-serif";
+    --font-regular-arabic: "Din Next it arabic regular", "sans-serif";
+    --font-light-arabic: "Din Next it light arabic", "sans-serif";
 
     /* line height */
     --line-height-text: 28px; /* line heigth voor de paragraaf op detailpagina*/
