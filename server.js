@@ -33,7 +33,7 @@ app.get('/', async function (request, response) {
   response.render("index.liquid", { api: apiResponseJSON.data });
 });
 
-
+// Route voor de homepagina in het arabisch
 app.get('/ar', async function (request, response) {
   const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
   );
@@ -42,6 +42,7 @@ app.get('/ar', async function (request, response) {
   response.render("indexar.liquid", { api: apiResponseJSON.data });
 });
 
+// Route voor elk specifiek object
 app.get ('/object/:id', async function (request, response) {
   const artworkId = request.params.id; 
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,image,summary`
@@ -50,17 +51,7 @@ app.get ('/object/:id', async function (request, response) {
   response.render("objects.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
 });
 
-app.get('/acquisition', async function (request, response) {
-  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
-  );
-  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-  
-  const messageResponse = await fetch("https://fdnd-agency.directus.app/items/fabrique_messages/?filter={%22for%22:%20{%22_contains%22:%20%22Karima_%22}}")
-  const messageResponseJSON = await messageResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
-
-  response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
-});
-
+// Route voor elk specifiek object in het arabisch
 app.get('/ar/object/:id', async function (request, response) {
   const artworkId = request.params.id; 
   const apiResponse = await fetch(`https://fdnd-agency.directus.app/items/fabrique_art_objects/${artworkId}?fields=title,titleAR,image,slug,summary,summaryAR`
@@ -68,6 +59,20 @@ app.get('/ar/object/:id', async function (request, response) {
   const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
   response.render("objectar.liquid", { artwork: apiResponseJSON.data }); // in liquid refereer je naar de variable waarin de data opgeslagen staat. 
 });
+
+app.get('/acquisition', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  // Voor het weergeven van de opgehaalde data in op de acquisitionpagina
+  const messageResponse = await fetch("https://fdnd-agency.directus.app/items/fabrique_messages/?filter={%22for%22:%20{%22_contains%22:%20%22Karima_%22}}")
+  const messageResponseJSON = await messageResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+
+  response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
+});
+
+
 
 
 //POST routes

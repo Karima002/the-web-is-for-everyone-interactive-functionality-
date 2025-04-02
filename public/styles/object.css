@@ -67,7 +67,7 @@
         grid-column: 1/2;
         
     }
-    p {
+    .artwork-summary {
         grid-column: 1/2;
         font-family: var(--font-default);
         font-weight: 100;
@@ -76,6 +76,14 @@
         letter-spacing: var(--letter-spacing);
     }
 }
+
+
+.summary-ar {
+    font-size: var(--font-size-xm);
+    grid-column: 1/2;
+
+}
+
 
 .see-also {
     padding-left: 2em;

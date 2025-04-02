@@ -4,7 +4,7 @@
 
 <main class="main-detail">
 
-
+<!-- Image die uit de database wordt gehaald --> 
 <section class="artwork">
     <article class="back-home">
         <img src="/assets/backbutton.svg">
@@ -23,9 +23,46 @@
     </article>
 </section>
 
+<!-- Titel en beschrijving van de artwork --> 
 <section class="info-artwork">
-    {% for %}
-    <h1>{{ artwork.titleAR }}</h1>
-    <p> {{ artwork.summaryAR }}</p>
+    {% if artwork %}
+        <h1>{{ artwork.titleAR }}</h1>
+        <p class="summary-ar"> {{ artwork.summaryAR }}</p>
+    {% else %}
+        <p> No description available </p>
+    {% endif %}
 </section>
+
+<!-- Suggesties -->
+
+<section class="see-also">
+    <h2>قد يعجبك أيضًا</h2>
+        <ul class="suggestions">
+            <li>
+                <img src="/assets/image1.png">
+                <p>تمساح</p>
+                <h3>لم شمل العائلة</h3>
+            </li>
+
+            <li>
+                <img src="/assets/image2.png">
+                <p>إيران، 1700 – 1800 م</p>
+                <h3>قوس من الخشب والورنيش</h3>
+            </li>
+
+            <li>
+                <img src="/assets/image3.png">
+                <p>أولافور إلياسون</p>
+                <h3>الظلال تسافر على بحر النهار</h3>
+            </li>
+
+            <li>
+                <img src="/assets/image4.png">
+                <p>مجهول</p>
+                <h3>بخناق (غطاء رأس)</h3>
+            </li>
+        </ul>
+</section>
+
+</main>
 

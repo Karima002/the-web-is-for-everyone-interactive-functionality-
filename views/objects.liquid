@@ -4,6 +4,8 @@
 
 <main class="main-detail">
 
+<!-- Image die uit de database wordt gehaald + alternatief als er geen image beschikbaar is--> 
+
 <section class="artwork">
     <article class="back-home">
         <img src="/assets/backbutton.svg">
@@ -12,7 +14,6 @@
 
     {% if artwork.image %}
         <img class="artwork-object" src="https://fdnd-agency.directus.app/assets/{{ artwork.image }}" alt="images of artwork in qatar " width="300px">        
-        {% comment %} <h1>{{ artwork.title }}</h1> {% endcomment %}
 
     {% else %}
         <p>No image availible</p>
@@ -23,11 +24,15 @@
     </article>
 </section>
 
+<!-- informatie over de artwork: titel + beschrijving --> 
+
 <section class="info-artwork">
     <h1>{{ artwork.title }}</h1>
     <p>Museum of Islamic Art</p>
-    <p> {{ artwork.summary }}</p>
+    <p class="artwork-summary"> {{ artwork.summary }}</p>
 </section>
+
+<!-- Suggesties --> 
 
 <section class="see-also">
     <h2>You may also like</h2>
