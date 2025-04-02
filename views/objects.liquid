@@ -26,11 +26,53 @@
 
 <!-- informatie over de artwork: titel + beschrijving --> 
 
-<section class="info-artwork">
-    <h1>{{ artwork.title }}</h1>
-    <p>Museum of Islamic Art</p>
-    <p class="artwork-summary"> {{ artwork.summary }}</p>
-</section>
+<div class="description"> 
+    <section class="info-artwork">
+        <h1>{{ artwork.title }}</h1>
+        <p class="artwork-summary"> {{ artwork.summary }}</p>
+    </section>
+
+    <section class="table-info">
+        {% if artwork %}
+        <table>
+            <tr>
+                <td class="label-cell">Full title:</td>
+                <td> {{ artwork.title | default: "No full title available"}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Artist:</td>
+                <td> {{ artwork.artist | default: "No artist available"}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Location created:</td>
+                <td> {{ artwork.location | default: "No location available"}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Period:</td>
+                <td>{{ artwork.displayDate | default: "No period available"}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Material:</td>
+                <td> {{ artwork.materials | default: "No materia available"}}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Techniques:</td>
+                <td> {{ artwork.techniques | default: "No techniques available" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Object number:</td>
+                <td>{{ artwork.objectNumber | default: "No object number available" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">Record type:</td>
+                <td>{{ artwork.recordType | default: "No record type available" }}</td>
+            </tr>
+        </table>
+        {% else %}
+            <p>No information available for artwork</p> 
+        {% endif %}
+    </section>
+</div>
 
 <!-- Suggesties --> 
 
