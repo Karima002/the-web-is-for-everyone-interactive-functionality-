@@ -19,9 +19,23 @@ header {
     align-items: center;
 }
 
+.navigation-ar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: .1em 1.7em .1em 1.7em;
+}
+
 .menu-logo {
     padding-left: 2em;
     justify-content: flex-start;
+}
+
+.menu-logo-ar {
+    padding-right: .2em;
+    justify-content: right;
 }
 
 .nav-list {
@@ -125,13 +139,16 @@ span {
 .form-search-collection {
     position: fixed;
     bottom: 1em;
-    right: 50%;
+    right: 55%;
     cursor: pointer;
 }
 
 input[type="search"] {
-    width: 200%;
-    height: 3em;
+    width: 150%;
+    height: 4.5em;
+    @media (min-width: 480px) {
+        width: 300%;  
+    }
 }
 
 
