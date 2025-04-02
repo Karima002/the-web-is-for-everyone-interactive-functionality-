@@ -72,6 +72,13 @@ app.get('/acquisition', async function (request, response) {
   response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
 });
 
+app.get('/succesfull', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  response.render("succes.liquid", { api: apiResponseJSON.data });
+});
 
 
 
