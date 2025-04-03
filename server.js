@@ -123,7 +123,7 @@ app.post('/acquisition', async function (request, response) {
   });
   
 
-  response.redirect(303, '/acquisition')
+  response.redirect(303, '/succesfull')
 
 })
 
