@@ -141,11 +141,30 @@ span {
     bottom: 1em;
     right: 55%;
     cursor: pointer;
+    input::placeholder {
+        font-size: var(--font-size-xm);
+        padding-left: 1em;
+    }
 }
+
+.form-search-collection-ar {
+    position: fixed;
+    bottom: 1em;
+    right: 55%;
+    cursor: pointer;
+    input::placeholder {
+        font-weight: bold;
+        font-size: var(--font-size-xm);
+        padding-left: 1em;
+    }
+    
+}
+
+
 
 input[type="search"] {
     width: 150%;
-    height: 4.5em;
+    height: 5em;
     @media (min-width: 480px) {
         width: 300%;  
     }
