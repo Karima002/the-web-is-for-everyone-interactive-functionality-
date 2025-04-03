@@ -24,14 +24,63 @@
 </section>
 
 <!-- Titel en beschrijving van de artwork --> 
-<section class="info-artwork-ar">
-    {% if artwork %}
-        <h1>{{ artwork.titleAR }}</h1>
-        <p class="summary-ar"> {{ artwork.summaryAR }}</p>
+<div class="description"> 
+    <section class="info-artwork-ar">
+        {% if artwork %}
+            <h1>{{ artwork.titleAR }}</h1>
+            <p class="summary-ar"> {{ artwork.summaryAR }}</p>
+        {% else %}
+            <p> No description available </p>
+        {% endif %}
+    </section>
+
+    <section class="table-info">
+        {% if artwork %}
+        <table>
+            <tr>
+                <td class="label-cell">العنوان الكامل:</td>
+                <td class="value-cell"> {{ artwork.titleAR | default: "لا يوجد عنوان كامل متاح" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">الفنان:</td>
+                <td class="value-cell"> {{ artwork.artist | default: "لا يوجد فنان متاح" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">الموقع الذي تم الإنشاء فيه:</td>
+                <td class="value-cell"> {{ artwork.location | default: "لا يوجد موقع متاح" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">الفترة الزمنية:</td>
+                <td class="value-cell">{{ artwork.displayDate | default: "لا توجد فترة زمنية متاحة" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">المواد:</td>
+                <td class="value-cell"> {{ artwork.materials | default: "لا توجد مواد متاحة" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">التقنيات:</td>
+                <td class="value-cell"> {{ artwork.techniques | default: "لا توجد تقنيات متاحة" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">رقم الكائن:</td>
+                <td class="value-cell">{{ artwork.objectNumber | default: "لا يوجد رقم كائن متاح" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">نوع السجل:</td>
+                <td class="value-cell">{{ artwork.recordType | default: "لا يوجد نوع سجل متاح" }}</td>
+            </tr>
+            <tr>
+                <td class="label-cell">اقتراح:</td>
+                <td class="value-cell">هل أنت مهتم بالتبرع أو بيع عمل فني لمتاحف قطر؟ قم بإرسال معلوماتك من خلال <a href="/acquisitionar">نموذج اقتراح الاقتناء</a>.</td>
+            </tr>
+
+    </table>
     {% else %}
-        <p> No description available </p>
+        <p>لا توجد معلومات متاحة عن العمل الفني</p>
     {% endif %}
-</section>
+    </section>
+</div>
+
 
 
 
