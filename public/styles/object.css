@@ -27,6 +27,16 @@
     }
 }
 
+.back-ar {
+    color: var(--color-accent);
+    font-family: var(--font-default);
+    text-transform: uppercase;
+    font-size: var(--font-size-m);
+    &:hover {
+        text-decoration: underline;
+        }
+}
+
 .copyright {
     background-color: var(--color-detailpage);
     max-width: fit-content;
@@ -81,9 +91,14 @@
 
     .info-artwork {
         border-right: .1em solid var(--color-default);
+    }
 
+    .info-artwork-ar {
+        border-right: .1em solid var(--color-default);
     }
 }
+
+
 
 .table-info {
     grid-column: 2/2;
@@ -107,6 +122,10 @@
     font-size: var(--font-size-xm);
     grid-column: 1/2;
     font-family: var(--font-light-arabic);
+    padding-top: 1.5em;
+    padding-right: .7em;
+    font-weight: 100;
+
 }
 
 
