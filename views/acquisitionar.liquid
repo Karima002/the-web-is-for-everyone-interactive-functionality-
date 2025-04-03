@@ -1,0 +1,46 @@
+{% render 'partials/head.liquid', title: 'اقتراح لاكتساب كائن' %}
+
+{% render 'partials/header.liquid' %}
+
+<main>
+
+<section class="title">
+    <h1 class="title-acquisition">اقتراح لاكتساب كائن</h1>
+    
+    <p class="paragraph-acquisition">هل أنت مهتم بالتبرع أو بيع عمل فني لمتاحف قطر؟ قم بإرسال معلوماتك من خلال هذا النموذج لاقتراح الاقتناء.</p>
+
+</section>
+
+<section class="form-section">
+    <p class="paragraph-mandatory">الحقول المحددة بـ * إلزامية</p>
+
+    <form method="post" action="/acquisition">
+        <h2>معلوماتك</h2>
+        <p class="paragraph-mandatory">الاسم الكامل*</p>
+        <input type="text" name="name" required/>
+
+        <p class="paragraph-mandatory">البريد الإلكتروني*</p>
+        <input type="text" name="email" required/>
+
+        <h2>تفاصيل الكائن</h2>
+        <input type="text" name="description" required/>
+
+        <a href="/succesfull">إرسال</a>
+    </form>
+
+</section>
+
+<section class="form-section history">
+    <h2>سجل الاقتراحات</h2>
+
+    {% for message in messages reversed %}
+        {% if forloop.index <= 3 %}
+            <p class="text-history"> {{ "تم إرسال الاقتراح بنجاح في " | append: message.created }} </p>
+        {% else %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+</section>
+
+</main>
