@@ -72,6 +72,20 @@ app.get('/acquisition', async function (request, response) {
   response.render("acquisitions.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
 });
 
+
+app.get('/acquisitionar', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  // Voor het weergeven van de opgehaalde data in op de acquisitionpagina
+  const messageResponse = await fetch("https://fdnd-agency.directus.app/items/fabrique_messages/?filter={%22for%22:%20{%22_contains%22:%20%22Karima_%22}}")
+  const messageResponseJSON = await messageResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+
+  response.render("acquisitionar.liquid", { api: apiResponseJSON.data, messages: messageResponseJSON.data});
+});
+
+
 app.get('/succesfull', async function (request, response) {
   const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
   );
