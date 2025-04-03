@@ -35,7 +35,9 @@
 .paragraph-mandatory {
     color: var(--color-default);
     font-family: var(--font-default);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-m);
+    padding-bottom: .5em;
+    padding-top: .5em;
 }
 
 .form-section {
@@ -52,8 +54,8 @@ h2 {
     font-family: var(--font-default);
     font-weight: 100 ;
     font-size: var(--font-size-xm);
-    padding-bottom: 1em;
-    padding-top: 2em;
+    margin-top: 2em;
+    margin-bottom: 1.2em;
     place-content: center;
     flex-direction: column;
 }
@@ -78,4 +80,21 @@ form input[type="text"] {
 
 .history {
     padding-bottom: 6em;
+}
+
+.succes-button {
+    border: 2px solid var(--color-default);
+    font-family: var(--font-default);
+    background-color: var(--color-accent-yellow);
+    padding: 1.3em 1.8em 1.3em 1.8em;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+    color: var(--color-default);
+    font-weight: 550;
+    margin-top: 2em;
+    &:hover {
+        background-color: var(--color-default);
+        color: var(--color-accent);
+    }
 }
