@@ -109,7 +109,6 @@ let forms = [] //array voor het opslaan van formulieren
 app.post('/acquisition', async function (request, response) {
   // forms.push (request.body.texts)
 
-  console.log(request.body)
   await fetch("https://fdnd-agency.directus.app/items/fabrique_messages", {
     method: "POST",
     body: JSON.stringify({
