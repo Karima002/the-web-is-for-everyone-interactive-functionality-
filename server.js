@@ -94,6 +94,13 @@ app.get('/succesfull', async function (request, response) {
   response.render("succes.liquid", { api: apiResponseJSON.data });
 });
 
+app.get('/succesfullar', async function (request, response) {
+  const apiResponse = await fetch('https://fdnd-agency.directus.app/items/fabrique_art_objects'
+  );
+  const apiResponseJSON = await apiResponse.json(); // Lees van de response van die fetch het JSON object in, waar we iets mee kunnen doen
+  
+  response.render("succesar.liquid", { api: apiResponseJSON.data });
+});
 
 
 //POST routes
@@ -125,6 +132,27 @@ app.post('/acquisition', async function (request, response) {
   response.redirect(303, '/succesfull')
 
 })
+
+app.post('/acquisitionar', async function (request, response) {
+  // forms.push (request.body.texts)
+
+  await fetch("https://fdnd-agency.directus.app/items/fabrique_messages", {
+    method: "POST",
+    body: JSON.stringify({
+      for: "Karima_" + request.body.name,
+      from: request.body.email,
+      text: request.body.description,
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }, //request met post, met headers geef je aan wat er is meegegeven, je geeft informatie over wat je in de request heb meegegeven. 
+  });
+  
+
+  response.redirect(303, '/succesfullar')
+
+})
+
 
 
 /*
