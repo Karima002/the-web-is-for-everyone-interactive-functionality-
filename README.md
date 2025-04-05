@@ -65,7 +65,7 @@ Bij het ontwerpen van het formulier voor “Object Acquisition” is bewust geko
 ### Error State
 
 ### Succes State
-Na het verzenden van het acquisition formulier krijg je een “succes state”  te zien. Het is een apart scherm die ziet nadat je een formulier succesvol hebt ingevuld. Dit is belangrijk voor de gebruikerservaring (UX), want het geeft duidelijkheid en het bevestigd dat alles goed is gegaan. 
+Na het verzenden van het acquisition formulier krijg je een “succes state”  te zien. Het is een apart scherm die ziet nadat je een formulier succesvol hebt ingevuld. Dit is belangrijk voor de gebruikerservaring (UX), want het geeft duidelijkheid en het bevestigd dat alles goed is gegaan. Na een [user test[(https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/issues/11#issue-2955793670) kwam namelijk naar voren dat nog niet duidelijk is hoe de user kan zien dat het verzenden van het formulier is gelukt. 
 
 ![image](https://github.com/user-attachments/assets/1f615669-9414-4b77-a6f7-85189ad3a813)
 
