@@ -128,7 +128,6 @@ app.post('/acquisition', async function (request, response) {
     }, //request met post, met headers geef je aan wat er is meegegeven, je geeft informatie over wat je in de request heb meegegeven. 
   });
   
-
   response.redirect(303, '/succesfull')
 
 })

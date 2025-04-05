@@ -139,11 +139,11 @@ span {
 .form-search-collection {
     position: fixed;
     bottom: 1em;
-    right: 55%;
+    right: 50%;
     cursor: pointer;
     input::placeholder {
         font-size: var(--font-size-xm);
-        padding-left: 1em;
+        padding-left: .5em;
     }
 }
 
@@ -164,10 +164,12 @@ span {
 
 input[type="search"] {
     width: 150%;
-    height: 5em;
+    height: 3.5em;
     @media (min-width: 480px) {
-        width: 300%;  
+        width: 200%;  
         color: var(--color-default);
+        padding-left: 2em;
+        font-size: var(--font-size-xm);
     }
 }
 
