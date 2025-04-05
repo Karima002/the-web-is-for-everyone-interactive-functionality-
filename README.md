@@ -48,7 +48,7 @@ https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/
 
 ## Ontwerpkeuzes
 ### Tweetalige navigatie (Engels & Arabisch)
-Vanuit de navigatie kan je switchen van een Engelse site naar een Arabische site. Vanuit daar kan je kiezen voor een artobject. De informatie van het object wordt in het arabisch opgehaald vanuit de database. Als er geen informatie beschikbaar wordt een default tekst weergegeven. Vanuit het artobject kan je ervoor kiezen een formulier in te vullen. Dit formulier kan in het arabisch worden ingevuld indien de bezoeker een artobject wil verkopen of verdere informatie heeft over een bepaald artobject. 
+Vanuit de navigatie kan je switchen van een Engelse site naar een Arabische site. Vanuit daar kan je kiezen voor een artobject. De informatie van het object wordt in het arabisch opgehaald vanuit de database. Als er geen informatie beschikbaar wordt een default tekst weergegeven. Vanuit het artobject kan je ervoor kiezen een formulier in te vullen. Dit formulier kan in het arabisch worden ingevuld indien de bezoeker een artobject wil verkopen of verdere informatie heeft over een bepaald artobject. Ook heb ik een [user test](https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/issues/16) uitgevoerd om het gebruik voor de arabische bezoekers te verbeteren.
 
 https://github.com/user-attachments/assets/90280bf1-6786-4f80-a449-7f843229c8b3
 
