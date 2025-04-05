@@ -98,3 +98,21 @@ form input[type="text"] {
         color: var(--color-accent);
     }
 }
+
+.return-homepage {
+    position: relative;
+    left: 45%;
+    border: 2px solid var(--color-default);
+    font-family: var(--font-default);
+    background-color: var(--color-accent-yellow);
+    padding: .8em 1.8em .8em 1.8em;
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+    color: var(--color-default);
+    font-weight: 550;
+    margin-top: 2em;
+    &:hover {
+        background-color: var(--color-default);
+        color: var(--color-accent);
+    }
+}
