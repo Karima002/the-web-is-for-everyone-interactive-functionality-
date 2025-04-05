@@ -6,18 +6,15 @@ De website is gebouwd met Node.js, Express, Liquid als templating engine en Dire
 
 [Live site](https://the-web-is-for-everyone-interactive-z6p6.onrender.com/)
 
-## Beschrijving
-<!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
-<!-- Voeg een mooie poster visual of video toe 📸 -->
-<!-- Voeg een link toe naar GitHub Pages 🌐-->
 
-## Gebruik
+## Beschrijving
 
 De website biedt de volgende functionaliteiten:
 
 - Homepagina: Hier worden kunstobjecten weergegeven in een responsive column indeling.
 - Detailpagina: Gebruikers kunnen doorklikken op een object om meer informatie te zien.
 - Acquisitieformulier: Gebruikers kunnen nieuwe objecten aanmelden via een formulier, waarbij een POST-request wordt verstuurd naar de API.
+- Switch van talen: Bezoekers kunnen de website ook in het arabisch bezoeken. Daarvoor kunnen ze op العربية klikken op de navigatie.
 
 ### User stories
 User Stories
@@ -47,16 +44,34 @@ Wanneer een gebruiker een object aanmeldt, wordt dit met een POST-request naar D
 https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/blob/7bf956e2f1611fc7e5361dc8ad42cb59dc5a2eac/server.js#L68-L87
 
 
-### UI-stack states
-#### Succes State
 
-#### Loading State
 
-#### Error State
+## Ontwerpkeuzes
+### Tweetalige navigatie (Engels & Arabisch)
+Vanuit de navigatie kan je switchen van een Engelse site naar een Arabische site. Vanuit daar kan je kiezen voor een artobject. De informatie van het object wordt in het arabisch opgehaald vanuit de database. Als er geen informatie beschikbaar wordt een default tekst weergegeven. Vanuit het artobject kan je ervoor kiezen een formulier in te vullen. Dit formulier kan in het arabisch worden ingevuld indien de bezoeker een artobject wil verkopen of verdere informatie heeft over een bepaald artobject. 
+
+https://github.com/user-attachments/assets/90280bf1-6786-4f80-a449-7f843229c8b3
+
+
+### Toepassen huisstijl op de acquisitionpagina
+Bij het ontwerpen van het formulier voor “Object Acquisition” is bewust gekozen om de bestaande huisstijl van Qatar Museums door te trekken. Hierdoor sluit het formulier visueel goed aan bij de rest van de website. Dit is terug te zien in de gebruikte kleuren, typografie, strakke lijnen en blokverdeling. Ik heb dezelfde huisstijl gebruikt als op andere pagina’s, zodat alles er herkenbaar uitziet. Het doel van het formulier is dat bezoekers kunst kunnen aanbieden of verdere informatie kunnen invullen over bepaalde kunst. 
+
+![image](https://github.com/user-attachments/assets/638b4f94-a7b9-4535-bbfd-43b0b0929ac4)
+
+## UI-stack states
+
+### Loading State
+
+### Error State
+
+### Succes State
+Na het verzenden van het acquisition formulier krijg je een “succes state”  te zien. Het is een apart scherm die ziet nadat je een formulier succesvol hebt ingevuld. Dit is belangrijk voor de gebruikerservaring (UX), want het geeft duidelijkheid en het bevestigd dat alles goed is gegaan. Na een [user test[(https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/issues/11#issue-2955793670) kwam namelijk naar voren dat nog niet duidelijk is hoe de user kan zien dat het verzenden van het formulier is gelukt. 
+
+![image](https://github.com/user-attachments/assets/1f615669-9414-4b77-a6f7-85189ad3a813)
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
-
+Het project is gebouwd met NodeJS. Om het project te kunnen gebruiken dien je eerste NodeJS te installeren. Dit doe je door het invullen van npm install in de terminal. Vul daarna npm start in om de server te starten. Via http://localhost:8000/ kan je je werk bekijken. 
 
 ## Bronnen
 
