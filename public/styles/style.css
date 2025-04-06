@@ -81,7 +81,13 @@ span {
     font-weight: 550;
     color: var(--color-default);
     text-transform: uppercase;
-    
+}
+
+/* Fallback als 550 niet wordt ondersteund */
+@supports not (font-weight: 550) {
+    .link-menu {
+        font-weight: 500;
+    }
 }
 
 .link-ticket {
