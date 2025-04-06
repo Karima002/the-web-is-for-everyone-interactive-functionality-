@@ -73,6 +73,11 @@ Na het verzenden van het acquisition formulier krijg je een “succes state”  
 ![image](https://github.com/user-attachments/assets/1f615669-9414-4b77-a6f7-85189ad3a813)
 
 ## Progressive enhancement
+Progressive Enhancement is een strategie die helpt bij het bouwen van websites die altijd werken, ongeacht de technologie die de gebruiker tot zijn beschikking heeft. Het idee is om je website stap voor stap uit te breiden, zodat je de basisfunctionaliteit voor iedereen garandeert. Stap voor stap voeg je extra functies toevoegt voor gebruikers met meer geavanceerde browsers of apparaten.
+- Core functionaliteit: Op de site wil ik een interactie met de server maken. De bezoeker kan het formulier invullen met verdere informatie over de artwork. Onderdaan wordt de history weergegeven van eerdere bezoekers die ook een proposal hebben ingevuld.
+- Functionaliteit bouwen met simpele techniek. De functionaliteit heb ik gebouwd met een <form> element.
+https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/blob/117c0e584f7287a375118679b40f24bd8bfea998/views/acquisitions.liquid#L18-L30
+- Extra enhancement toevoegen: In CSS heb ik de feature detection @supports gebruikt. Met @support kan ik checken of een browser een techniek (bijvoorbeeld flexbox) ondersteunt. Zo zorg ik ervoor dat de site werkt in alle browsers en dat in moderne browsers het formulier onder elkaar wordt geplaatst met flexbox.
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
