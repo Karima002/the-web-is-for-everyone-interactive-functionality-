@@ -44,8 +44,6 @@ Wanneer een gebruiker een object aanmeldt, wordt dit met een POST-request naar D
 https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/blob/7bf956e2f1611fc7e5361dc8ad42cb59dc5a2eac/server.js#L68-L87
 
 
-
-
 ## Ontwerpkeuzes
 ### Tweetalige navigatie (Engels & Arabisch)
 Vanuit de navigatie kan je switchen van een Engelse site naar een Arabische site. Vanuit daar kan je kiezen voor een artobject. De informatie van het object wordt in het arabisch opgehaald vanuit de database. Als er geen informatie beschikbaar wordt een default tekst weergegeven. Vanuit het artobject kan je ervoor kiezen een formulier in te vullen. Dit formulier kan in het arabisch worden ingevuld indien de bezoeker een artobject wil verkopen of verdere informatie heeft over een bepaald artobject. Ook heb ik een [user test](https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/issues/16) uitgevoerd om het gebruik voor de arabische bezoekers te verbeteren.
@@ -68,6 +66,8 @@ Bij het ontwerpen van het formulier voor “Object Acquisition” is bewust geko
 Na het verzenden van het acquisition formulier krijg je een “succes state”  te zien. Het is een apart scherm die ziet nadat je een formulier succesvol hebt ingevuld. Dit is belangrijk voor de gebruikerservaring (UX), want het geeft duidelijkheid en het bevestigd dat alles goed is gegaan. Na een [user test[(https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/issues/11#issue-2955793670) kwam namelijk naar voren dat nog niet duidelijk is hoe de user kan zien dat het verzenden van het formulier is gelukt. 
 
 ![image](https://github.com/user-attachments/assets/1f615669-9414-4b77-a6f7-85189ad3a813)
+
+## Progressive enhancement
 
 ## Installatie
 <!-- Bij Installatie staat hoe een andere developer aan jouw repo kan werken -->
