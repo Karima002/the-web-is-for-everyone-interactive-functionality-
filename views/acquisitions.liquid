@@ -33,11 +33,11 @@
 <section class="form-section history">
     <h2>History proposals</h2>
 
-    {% for message in messages reversed %}
-        {% if forloop.index <= 3 %}
-            <p class="text-history"> {{ "Successful sent proposal at " | append: message.created }} </p>
+    {% for message in messages reversed %} <!-- de nieuwste berichten als eerste worden getoond-->
+        {% if forloop.index <= 3 %} <!-- forloop.index begint bij 1, dus dit pakt alleen object 1, 2 en 3 (beginnend vanaf onderaan maar reversed door de filter op voorgaande regel). -->          
+            <p class="text-history"> {{ "Successful sent proposal at " | append: message.created }} </p> <!-- append is een Liquid filter waarmee je tekst of data aan het einde van een string plakt. -->
         {% else %}
-            {% break %}
+            {% break %} <!-- De rest van de berichten na object 3 worden niet bekeken-->
         {% endif %}
     {% endfor %}
 
