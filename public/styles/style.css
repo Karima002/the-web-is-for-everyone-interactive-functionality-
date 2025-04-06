@@ -169,8 +169,10 @@ span {
 
 
 input[type="search"] {
+    -webkit-appearance: none; /* Verwijdert standaard WebKit-stijlen in Safari/Chrome*/
+    appearance: none;         /* Modern alternatief voor appearance reset, voor bredere browserondersteuning */
+    height: 3.5em;            
     width: 150%;
-    height: 3.5em;
     @media (min-width: 480px) {
         width: 200%;  
         color: var(--color-default);
