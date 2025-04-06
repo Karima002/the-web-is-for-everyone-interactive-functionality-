@@ -39,7 +39,7 @@
         <table>
             <tr>
                 <td class="label-cell">العنوان الكامل:</td>
-                <td class="value-cell"> {{ artwork.titleAR | default: "لا يوجد عنوان كامل متاح" }}</td>
+                <td class="value-cell"> {{ artwork.titleAR | default: "لا يوجد عنوان كامل متاح" }}</td> <!-- Default filter: https://shopify.github.io/liquid/filters/default/-->
             </tr>
             <tr>
                 <td class="label-cell">الفنان:</td>
