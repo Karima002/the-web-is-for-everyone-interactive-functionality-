@@ -118,17 +118,17 @@ app.post('/acquisition', async function (request, response) {
 
   await fetch("https://fdnd-agency.directus.app/items/fabrique_messages", {
     method: "POST",
-    body: JSON.stringify({
-      for: "Karima_" + request.body.name,
-      from: request.body.email,
-      text: request.body.description,
+    body: JSON.stringify({ //gegevens ]die  naar de server wordt gestuurd, omzetten in een JSON-string.
+      for: "Karima_" + request.body.name,  // De naam van de gebruiker, toegevoegd aan een vaste string "Karima_" voor het alleen weergeven van mijn posts.
+      from: request.body.email,  // E-mail van de gebruiker
+      text: request.body.description,  // De beschrijving die door de gebruiker is ingevoerd in het formulier
     }),
     headers: {
       'Content-Type': 'application/json;charset=UTF-8'
     }, //request met post, met headers geef je aan wat er is meegegeven, je geeft informatie over wat je in de request heb meegegeven. 
   });
   
-  response.redirect(303, '/succesfull')
+  response.redirect(303, '/succesfull') //Na het versturen van de gegevens naar de API wordt de gebruiker doorgestuurd naar de pagina /succesfull
 
 })
 
