@@ -58,13 +58,20 @@ Bij het ontwerpen van het formulier voor “Object Acquisition” is bewust geko
 
 ## UI-stack states
 
-### Loading State
+
 
 ### Ideal State
 In het formulier laat ik de ideal state zien. In de Ideal state wordt de geschiedenis van verzonden proposals weergegeven. Dit geeft de bezoeker een overzicht van eerdere proposals en maakt het makkelijk om terug te kijken naar wat er al is ingediend. Het formulier kan in het Engels als arabisch worden weergegeven. Dit hangt af van welke voorkeur te bezoeker heeft gekozen. 
 https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/blob/d71d11557066d7dfa6e477dee2cfa75d03ea33c3/views/acquisitions.liquid#L33-L44
 
 ![Image](https://github.com/user-attachments/assets/edf3b34e-34dd-4bd0-841f-b40007789434)
+
+### Loading State
+Voordat het formulier wordt verzonden krijg je een loading state te zien. De opacity van de button wordt verlaagd en er komt een zandloper emoji tevoorschijn. De loading state is gecodeerd met behulp van javascript.
+
+https://github.com/Karima002/the-web-is-for-everyone-interactive-functionality-/blob/66bd915bbfd0c8e5df5974ab917850dc69898b6a/views/acquisitions.liquid#L65-L69
+
+https://github.com/user-attachments/assets/a2d31e63-afc6-49ce-91be-2f96a40fde67
 
 
 ### Succes State
