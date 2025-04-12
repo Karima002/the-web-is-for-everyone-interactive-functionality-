@@ -26,7 +26,7 @@
         <h2>Object details</h2>
         <input type="text" name="description" required/>
 
-        <button class="succes-button" >Submit</button>
+        <button  id="submit-button" class="succes-button" >Submit</button>
     </form>
 
 </section>
@@ -61,6 +61,12 @@
         formData.append(event.submitter.name, event.submitter.value) //Zorgt ervoor dat de knop waarop je klikt ook meegestuurd wordt met de rest van het formulier.     // En voeg eventueel de name en value van de submit button toe aan die data
         }
 
+        
+        //Loading state 
+        const submitButton = form.querySelector('#submit-button'); //zoeken naar submit button binnen het formulier. Hier wordt gezocht naar een button element met ID submit-button
+        submitButton.classList.add('loading'); //Classlist toevoegen aan de submit button
+        submitButton.disabled = true; //Hiermee wordt voorkomen dat de gebruiker de knop meerdere keren aanklikt terwijl het formulier nog wordt verzonden.
+
         //Verstuur de data via fetch() naar de action URL met de juiste method (POST):
         const response = await fetch(form.action, {
         method: form.method,
@@ -85,10 +91,12 @@
         const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]')
 
         //Vervang het oude formulier met de nieuwe HTML:
-
         if (newState) {
         form.outerHTML = newState.outerHTML
         }
 
-})
+        // Na succesvolle verzending de loading knop herstellen
+        submitButton.classList.remove('loading');
+        submitButton.disabled = false;
+    })
 </script>

@@ -116,3 +116,19 @@ form input[type="text"] {
         color: var(--color-accent);
     }
 }
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none; /*voorkomen dat de gebruiker op de knop kan klikken terwijl het aan het laden is.*/
+  }
+  
+  .loading::after {  /* .loading::after voegt een visueel element toe na de knop */
+    content: "⏳"; 
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1 }
+    50% { opacity: 0.5 }
+    100% { opacity: 1 }
+  }
