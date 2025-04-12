@@ -15,8 +15,8 @@
 <section class="form-section ">
     <p class="paragraph-mandatory"> Fields marked * are Mandatory</p>
 
-    <form method="post" action="/acquisition" data-enhanced="formulier-{{ id }}"> <!-- Javascript gebruiken om het formulier zelf op te vangen en via een fetch versturen. Hiervoor gebruik je de data-enhanced attritbuut. -->
-        <h2>Your information</h2>
+    <form method="post" action="/acquisition" data-enhanced="formulier-{{ id }}">
+    <h2>Your information</h2>
         <p class="paragraph-mandatory">Full name*</p>
         <input type="text" name="name" required/>
 
@@ -62,27 +62,33 @@
         }
 
         //Verstuur de data via fetch() naar de action URL met de juiste method (POST):
-        const response = await fetch(form.action, { // Doe een fetch naar de server, net als hoe de browser dit normaal zou doen
-        method: form.method, 
+        const response = await fetch(form.action, {
+        method: form.method,
         body: new URLSearchParams(formData)
         })
 
+        // Als er een redirect is (zoals naar /succesfull), stuur de gebruiker daarheen
+        if (response.redirected) {
+        window.location.href = response.url
+        return
+        }
+
+        // Alleen uitvoeren als er géén redirect is (bijv. validatiefouten of update van het formulier)
         //Ontvang de HTML die de server terugstuurt
         const responseText = await response.text() // De server redirect op de normale manier, en geeft HTML terug
-
+        
         //Parse die HTML in JavaScript (zoals de browser dat zou doen)
         const parser = new DOMParser()
         const responseDOM = parser.parseFromString(responseText, 'text/html')
-
-
+        
         //Zoek daarin het vernieuwde formulier of stukje UI dat je wilt vervangen.
         const newState = responseDOM.querySelector('[data-enhanced="' + form.getAttribute('data-enhanced') + '"]')
 
-
         //Vervang het oude formulier met de nieuwe HTML:
 
+        if (newState) {
         form.outerHTML = newState.outerHTML
+        }
 
-        })
-
+})
 </script>
